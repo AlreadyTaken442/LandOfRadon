@@ -1,23 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Charakter : MonoBehaviour
 {
-    public int speed;
+        public float speed;
+        [SerializeField] private InputActionReference movement;
+        private Rigidbody2D rigbod;
+        private Vector2 movementInput;
 
-    // Update is called once per frame
-    void Update()
-    {
-        Walk();
+        public Transform target;
+
+        private void Start()
+            {
+                rigbod = GetComponent<Rigidbody2D>();
+            }
+
+            // Update is called once per frame
+            void Update()
+            {
+                movementInput = movement.action.ReadValue<Vector2>();
+            }
+
+            private void FixedUpdate()
+            {
+                rigbod.velocity = movementInput * speed;
+            }
     }
-
-    private void Walk()
-    {
-        float horizontalInput = Input.GetAxis("Horizontal") * speed * Time.deltaTime; //Horizontale Bewegung
-        Vector3 newPosition = transform.position + new Vector3(horizontalInput, 0, 0);
-
-        float verticalInput = Input.GetAxis("Vetical") * speed * Time.deltaTime; //Vertiakle Bewerbung
-        Vector3 newPosition1 = transform.position + new Vector3(verticalInput, 0, 0);
-    }
-}
