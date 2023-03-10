@@ -7,7 +7,6 @@ public class Verfolgung : MonoBehaviour
     public Transform hackerObjekt;
     public float verfolgungsRadius = 5f;
     public float geschwindigkeit = 3f;
-
     private Rigidbody2D rb;
 
     void Start()
