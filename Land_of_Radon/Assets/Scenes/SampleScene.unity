@@ -14084,7 +14084,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 338424669}
-  target: {fileID: 0}
+  target: {fileID: 1651850934}
 --- !u!50 &1651850937
 Rigidbody2D:
   serializedVersion: 4
