@@ -394,7 +394,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 704a92777c607914eafff873a2ac371d, type: 2}
+  - {fileID: 2100000, guid: 73c0ae772738e4d478cce6af93c36db8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13993,6 +13993,7 @@ GameObject:
   - component: {fileID: 1651850940}
   - component: {fileID: 1651850941}
   - component: {fileID: 1651850942}
+  - component: {fileID: 1651850943}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -14197,6 +14198,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1651850943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651850930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc762ba5766be544b732366d9da8606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  money: 1
 --- !u!1 &1868964040
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     private InventoryItem inventory;
     public GameObject itemButton;
+    public int cashValue = 1;
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryItem>();
@@ -26,6 +27,16 @@ public class Pickup : MonoBehaviour
                 }
 
             }
+            playermoneyinventory moneyinventory = other.GetComponent<playermoneyinventory>();
+
+            if (moneyinventory != null)
+            {
+                moneyinventory.money = moneyinventory.Money + cashValue;
+                print("Player has" + moneyinventory.Money + "money in it.");
+                gameObject.SetActive(false);
+            }
         }
     }
+
+                                                                                                                               
 }
