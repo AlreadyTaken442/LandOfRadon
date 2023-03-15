@@ -13041,6 +13041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthEnemy: 100
+  currentHealthEnemy: 0
 --- !u!1 &338424665
 GameObject:
   m_ObjectHideFlags: 0
@@ -14187,7 +14188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12f073ad16cf84d4faf2ae5d34853e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 8
   movement: {fileID: -8465373194027883904, guid: 7195402ca4b1add49a26a003fc0f8e2b, type: 3}
   maxHealth: 100
   currentHealth: 0
@@ -14283,7 +14284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 1873788837}
-  attackRange: 0.5
+  attackRange: 1
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
