@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
         if (currentHealthEnemy <= 0)
         {
             currentHealthEnemy = 0;
+            Destroy(gameObject);
         }
     }
 
