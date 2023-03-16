@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemButton: {fileID: 1724280155797058033, guid: bc22d356bdb45f24d9d453a3936ffe8d, type: 3}
+  cashValue: 1
 --- !u!58 &8064216042432605606
 CircleCollider2D:
   m_ObjectHideFlags: 0

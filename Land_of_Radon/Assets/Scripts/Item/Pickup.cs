@@ -27,11 +27,17 @@ public class Pickup : MonoBehaviour
                 }
 
             }
+
+
+            // Money System
             playermoneyinventory moneyinventory = other.GetComponent<playermoneyinventory>();
 
             if (moneyinventory != null)
             {
+                // Geldbetrag des Spielers wird festgelegt
                 moneyinventory.money = moneyinventory.Money + cashValue;
+
+                // In der Console wird ausgegeben wie viel Money der Spieler hat
                 print("Player has" + moneyinventory.Money + "money in it.");
                 gameObject.SetActive(false);
             }
