@@ -17,6 +17,8 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
 
     public Transform target; // Ziel-Transform des Charakters (nicht verwendet)
 
+    public Animator animator;
+
     private void Start()
     {
         rigbod = GetComponent<Rigidbody2D>(); // Initialisierung des Rigidbody2D-Komponente
@@ -26,12 +28,21 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
 
     void Update()
     {
+        //animator.SetFloat("speed");
         movementInput = movement.action.ReadValue<Vector2>(); // Eingabewerte für die Bewegung lesen
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             currentHealth -= 1;
             healthBar.SetHealth(currentHealth);
+        }
+
+        if(movementInput.x == 0 && movementInput.y == 0)
+        {
+            animator.SetBool("isRunning", false);
+        } else
+        {
+            animator.SetBool("isRunning", true);
         }
     }
 
