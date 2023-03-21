@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Slot : MonoBehaviour
 {
  private InventoryItem inventory;
@@ -27,3 +27,4 @@ public class Slot : MonoBehaviour
         }
     }
 }
+*/
