@@ -44,6 +44,11 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
         {
             animator.SetBool("isRunning", true);
         }
+
+        if (currentHealth == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()
