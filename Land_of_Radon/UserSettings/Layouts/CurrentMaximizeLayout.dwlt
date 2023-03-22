@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 13483
+  controlID: 26849
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 13484
+  controlID: 26850
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 13416
+  controlID: 26851
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 272.8
     height: 464.8
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -223,7 +223,7 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 185.20001}
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: deeeffff26fbffff94600000106100002c610000ae7f0000da7f0000328000003680000050800000
@@ -558,9 +558,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.8699768, y: 2.1865494, z: 1.7259084}
+    m_Target: {x: 1.0895154, y: 2.1767986, z: 1.7734216}
     speed: 2
-    m_Value: {x: 3.8699768, y: 2.1865494, z: 1.7259084}
+    m_Value: {x: 1.0895154, y: 2.1767986, z: 1.7734216}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -611,9 +611,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.680244
+    m_Target: 5.2486453
     speed: 2
-    m_Value: 12.680244
+    m_Value: 5.2486453
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -668,7 +668,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 32866
+  m_LastSelectedObjectID: -4548
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -688,8 +688,8 @@ MonoBehaviour:
     y: 464.8
     width: 1172.8
     height: 266
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -738,22 +738,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Packages/com.unity.2d.animation/Editor/Assets/SkinningModule/Icons/Light
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\mblum\Documents\GitHub\LandOfRadon\Land_of_Radon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 63}
-    m_SelectedIDs: ae620000
-    m_LastClickedID: 25262
-    m_ExpandedIDs: 00000000ae620000b0620000b2620000b4620000b6620000b862000000ca9a3b
+    scrollPos: {x: 0, y: 511}
+    m_SelectedIDs: 02740000
+    m_LastClickedID: 29698
+    m_ExpandedIDs: 00000000ae620000b0620000b2620000b4620000b6620000b8620000b06b000096730000407400006c780000cc78000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -806,10 +806,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 68800000fa7f0000d6800000b87f0000a47f00004e8000001a8000006a800000f67f000062800000
-    m_LastClickedInstanceID: 32866
+    m_SelectedInstanceIDs: 40710000
+    m_LastClickedInstanceID: 28992
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000ba6100003cc400001c620000
+    m_ExpandedInstanceIDs: c6230000ba6100003cc400001c6200003a620000bc660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -990,7 +990,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 32676
+  m_LastInspectedObjectInstanceID: 28992
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1029,6 +1029,6 @@ MonoBehaviour:
     m_CachedPref: -50
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 3017637386248834331, guid: ba376ff532043764696b0b4b1ff8ac27, type: 3}
+  m_Palette: {fileID: 7893788126589660577, guid: baa0a6158e67e3b45ae51517602daf80, type: 3}
   m_DrawGridGizmo: 1
   m_DrawGizmos: 0

@@ -10,7 +10,7 @@ public class Monoscript : MonoBehaviour
 
     public void PickupItem(int id)
     {
-        bool result = inventoryManager.AddItem(itemsToPickup[id]);
+      inventoryManager.AddItem(itemsToPickup[id]);
 
     }
 }
