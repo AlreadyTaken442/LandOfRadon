@@ -9,10 +9,10 @@ using UnityEngine.Tilemaps;
 public class Item : ScriptableObject
 {
     [Header("Only gameplay")]
-    //public TileBase tile;
-    //public ItemType type;
-    //public ActionType actionType;
-    //public Vector2Int range = new Vector2Int(5, 4);
+    public TileBase tile;
+    public ItemType type;
+    public ActionType actionType;
+    public Vector2Int range = new Vector2Int(5, 4);
 
     [Header("Only UI")]
     public bool stackable = true;
