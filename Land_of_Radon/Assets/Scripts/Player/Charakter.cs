@@ -6,6 +6,11 @@ using UnityEngine.UI;
 
 public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
 {
+
+    private Transform playerHand;
+    private Transform linkesBein;
+    private Transform rechtesBein;
+
     public float speed; // Geschwindigkeit des Charakters
     [SerializeField] private InputActionReference movement; // Referenz auf eine InputAction, die die Bewegung des Charakters steuert
     private Rigidbody2D rigbod; // Rigidbody2D-Komponente des Charakters
@@ -23,14 +28,34 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
     private Vector2 lastDirection = Vector2.right;
 
     // Verweise auf das Sprite-Renderer-Komponente des Charakters
-    private SpriteRenderer spriteRenderer;
+    private GameObject gameObject1;
 
     private void Start()
     {
         rigbod = GetComponent<Rigidbody2D>(); // Initialisierung des Rigidbody2D-Komponente
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        gameObject1 = GetComponent<GameObject>();
+
+        playerHand = transform.Find("PlayerObj/Player/PlayerHand");
+        linkesBein = transform.Find("PlayerObj/Player/LinkesBein");
+        rechtesBein = transform.Find("PlayerObj/Player/RechtesBein");
+
+        // Test ob Objekte gefunden wurden
+        if (playerHand == null)
+        {
+            Debug.LogError("PlayerHand konnte nicht gefunden werden!");
+        }
+
+        if (linkesBein == null)
+        {
+            Debug.LogError("LinkesBein konnte nicht gefunden werden!");
+        }
+
+        if (rechtesBein == null)
+        {
+            Debug.LogError("RechtesBein konnte nicht gefunden werden!");
+        }
     }
 
     void Update()
@@ -69,11 +94,11 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
             lastDirection = direction;
             if (lastDirection.x > 0)
             {
-                spriteRenderer.flipX = false;
+                gameObject.GetComponentInChildren<SpriteRenderer>().flipX = false;
             }
             else if (lastDirection.x < 0)
             {
-                spriteRenderer.flipX = true;
+                gameObject.GetComponentInChildren<SpriteRenderer>().flipX = true;
             }
         }
 
