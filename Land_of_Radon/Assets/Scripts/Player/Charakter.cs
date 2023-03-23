@@ -63,7 +63,7 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
         Vector2 direction = new Vector2(horizontal, vertical);
         transform.Translate(direction * speed * Time.deltaTime);
 
-        // Spiegle das Sprite, wenn sich die Laufrichtung ändert
+        //Spiegle das Sprite, wenn sich die Laufrichtung ändert
         if (direction != Vector2.zero)
         {
             lastDirection = direction;
@@ -76,6 +76,7 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
                 spriteRenderer.flipX = true;
             }
         }
+
     }
 
     private void FixedUpdate()
