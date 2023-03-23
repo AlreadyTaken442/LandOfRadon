@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2666944155214565578}
   - component: {fileID: 3623264886822720487}
   - component: {fileID: 2721468375009732571}
+  - component: {fileID: -3122889841998970992}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -114,3 +115,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8960c3da4aea68844be5c32e48641ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 2666944155214565578}
+  SelctedColor: {r: 1, g: 0.5981132, b: 1, a: 1}
+  notSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!225 &-3122889841998970992
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666944155214565556}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
