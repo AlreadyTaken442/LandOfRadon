@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 2666944155214565578}
   SelctedColor: {r: 1, g: 0.5981132, b: 1, a: 1}
-  notSelectedColor: {r: 1, g: 0.7773585, b: 0.7773585, a: 1}
+  notSelectedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!225 &-3122889841998970992
 CanvasGroup:
   m_ObjectHideFlags: 0

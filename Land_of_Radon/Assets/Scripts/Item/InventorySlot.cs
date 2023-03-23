@@ -15,7 +15,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     }
     public void Select()
     {
-        image.color = notSelectedColor;
+        image.color = SelctedColor;
     }
 
     public void Deselect()

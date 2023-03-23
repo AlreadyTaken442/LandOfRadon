@@ -5,12 +5,8 @@ using UnityEngine;
 public class Monoscript : MonoBehaviour
 {
     public InventoryManager inventoryManager;
-    public Item[] itemsToPickup;
+   
 
 
-    public void PickupItem(int id)
-    {
-      inventoryManager.AddItem(itemsToPickup[id]);
-
-    }
+ 
 }

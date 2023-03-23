@@ -29,31 +29,15 @@ public class InventoryManager : MonoBehaviour
         }
     }
     void ChangeSelectedSlot(int newValue) { 
-    {
-        if (selectedSlot >= 0) { }
-        inventorySlots[selectedSlot].Deselect();
+    
+        if (selectedSlot >= 0) { 
+        inventorySlots[selectedSlot].Deselect(); 
     }
         inventorySlots[newValue].Select();
         selectedSlot = newValue;
     }
 
-    void CheckAndAddToExistingStack(Item item)
-    {
-        // Überprüfen, ob ein Slot das gleiche Element mit einer Anzahl kleiner als das Maximum enthält
-        for (int i = 0; i < inventorySlots.Length; i++)
-        {
-            InventorySlot slot = inventorySlots[i];
-            DragDrop itemInSlot = slot.GetComponentInChildren<DragDrop>();
-            if (itemInSlot != null &&
-                itemInSlot.item == item &&
-                itemInSlot.count < maxStackedItems)
-            {
-                itemInSlot.count++;
-                itemInSlot.RefreshCount();
-                return;
-            }
-        }
-    }
+   
 
     void AddToEmptySlot(Item item)
     {
@@ -64,7 +48,7 @@ public class InventoryManager : MonoBehaviour
             DragDrop itemInSlot = slot.GetComponentInChildren<DragDrop>();
             if (itemInSlot == null || itemInSlot.gameObject == null)
             {
-                SpawnNewItem(item, slot);
+               
                 return;
             }
         }
@@ -72,14 +56,8 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        CheckAndAddToExistingStack(item);
         AddToEmptySlot(item);
     }
 
-    void SpawnNewItem(Item item, InventorySlot slot)
-    {
-        GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
-        DragDrop inventoryItem = newItemGo.GetComponent<DragDrop>();
-        inventoryItem.InitaliseItem(item);
-    }
+   
 }

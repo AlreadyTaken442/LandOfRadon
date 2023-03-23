@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
-[CreateAssetMenu(menuName = "Scriptable object/Item")]
+/*[CreateAssetMenu(menuName = "Scriptable object/Item")]
 public class Item : ScriptableObject
 {
     [Header("Only gameplay")]
@@ -33,3 +33,4 @@ public enum ActionType
     Dig,
     Mine
 }
+*/

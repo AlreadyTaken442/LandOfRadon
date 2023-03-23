@@ -13,46 +13,34 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     private GameObject canvas;
 
     //Public
-    public Text countText;
     public Image image;
     public static GameObject itemBeingDragged;
     
     // HideInInspector
   [HideInInspector] public Transform parentAfterDrag;
-  [HideInInspector] public Item item;
-  [HideInInspector] public int count = 1;
+  // [HideInInspector] public Item item;
 
 
     //voids
     private void Start()
     {
-        InitaliseItem(item);
-        RefreshCount();
+      //  InitaliseItem(item);
+        
     }
   
-    public void RefreshCount()
-    {
-        countText.text = count.ToString();
-        bool textActive = count > 1;
-        countText.gameObject.SetActive(textActive);
-    }
     private void Awake()
     {
         canvas = GameObject.FindGameObjectWithTag("Canvas");
     }
 
 
-    public void InitaliseItem(Item newItem)
-    {
-        item = newItem;
-        image.sprite = newItem.image;
-    }
     public void OnBeginDrag(PointerEventData eventData)
     {
         parentAfterDrag = transform.parent;
        transform.SetParent(canvas.transform);
         transform.SetAsLastSibling();
         image.raycastTarget = false;
+        Debug.Log("Begin Drag");
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -60,7 +48,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         transform.position = Input.mousePosition;
         Debug.Log(Input.mousePosition);
-        Debug.Log("Test");
+        Debug.Log("Dragging");
 
     }
 
@@ -69,6 +57,7 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
         transform.SetParent(parentAfterDrag);
         image.raycastTarget = true;
+        Debug.Log("End Dragging");
 
     }
 
