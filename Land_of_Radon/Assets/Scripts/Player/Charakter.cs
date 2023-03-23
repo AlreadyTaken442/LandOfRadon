@@ -6,11 +6,6 @@ using UnityEngine.UI;
 
 public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
 {
-
-    private Transform playerHand;
-    private Transform linkesBein;
-    private Transform rechtesBein;
-
     public float speed; // Geschwindigkeit des Charakters
     [SerializeField] private InputActionReference movement; // Referenz auf eine InputAction, die die Bewegung des Charakters steuert
     private Rigidbody2D rigbod; // Rigidbody2D-Komponente des Charakters
@@ -36,26 +31,6 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         gameObject1 = GetComponent<GameObject>();
-
-        playerHand = transform.Find("PlayerObj/Player/PlayerHand");
-        linkesBein = transform.Find("PlayerObj/Player/LinkesBein");
-        rechtesBein = transform.Find("PlayerObj/Player/RechtesBein");
-
-        // Test ob Objekte gefunden wurden
-        if (playerHand == null)
-        {
-            Debug.LogError("PlayerHand konnte nicht gefunden werden!");
-        }
-
-        if (linkesBein == null)
-        {
-            Debug.LogError("LinkesBein konnte nicht gefunden werden!");
-        }
-
-        if (rechtesBein == null)
-        {
-            Debug.LogError("RechtesBein konnte nicht gefunden werden!");
-        }
     }
 
     void Update()
