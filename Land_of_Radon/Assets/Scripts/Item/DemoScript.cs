@@ -6,7 +6,4 @@ public class Monoscript : MonoBehaviour
 {
     public InventoryManager inventoryManager;
    
-
-
- 
 }
