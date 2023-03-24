@@ -37,7 +37,7 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
     {
         movementInput = movement.action.ReadValue<Vector2>(); // Eingabewerte für die Bewegung lesen
 
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab)) // Test um leben zu verlieren
         {
             currentHealth -= 1;
             healthBar.SetHealth(currentHealth);
