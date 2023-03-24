@@ -39,7 +39,7 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
-            currentHealth -= 1;
+            currentHealth -= 25;
             healthBar.SetHealth(currentHealth);
         }
 
