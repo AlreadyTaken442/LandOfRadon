@@ -21,15 +21,12 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
-        if (currentHealthEnemy <= 0)
-        {
-            currentHealthEnemy = 0;
-            Destroy(gameObject);
-        }
     }
 
     void Die()
     {
         Debug.Log("Enemy died!");
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
+        Destroy(gameObject);
     }
 }

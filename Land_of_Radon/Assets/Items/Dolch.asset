@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f21cde5fe270cb4ab6014c66da7d446, type: 3}
+  m_Name: Dolch
+  m_EditorClassIdentifier: 
+  lootSprite: {fileID: 21300000, guid: c18cb38562c28424980407eb8b7b7746, type: 3}
+  lootname: Dolch
+  dropChance: 0
