@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
@@ -36,6 +37,11 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
     void Update()
     {
         movementInput = movement.action.ReadValue<Vector2>(); // Eingabewerte für die Bewegung lesen
+
+        if (currentHealth == 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
 
         if (Input.GetKeyDown(KeyCode.Tab)) // Test um leben zu verlieren
         {
