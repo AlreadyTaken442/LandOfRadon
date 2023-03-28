@@ -14,6 +14,7 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
 
     public int maxHealth;
     public int currentHealth;
+    private bool facingRight = true;
     public HealthBar healthBar;
 
     public Animator animator;
@@ -38,6 +39,7 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
     {
         movementInput = movement.action.ReadValue<Vector2>(); // Eingabewerte für die Bewegung lesen
 
+
         if (currentHealth == 0)
         {
             SceneManager.LoadScene("GameOver");
@@ -47,15 +49,6 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
         {
             currentHealth -= 1;
             healthBar.SetHealth(currentHealth);
-        }
-
-        if (movementInput.x == 0 && movementInput.y == 0)
-        {
-            animator.SetBool("isMoving", false);
-        }
-        else
-        {
-            animator.SetBool("isMoving", true);
         }
 
         if (currentHealth == 0)
@@ -70,17 +63,29 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
         transform.Translate(direction * speed * Time.deltaTime);
 
         // Spiegle das Sprite, wenn sich die Laufrichtung ändert
-        if (direction != Vector2.zero)
+        if (direction.x > 0 && !facingRight || direction.x < 0 && facingRight)
         {
-            lastDirection = direction;
-            if (lastDirection.x > 0)
-            {
-                spriteRenderer.flipX = false;
-            }
-            else if (lastDirection.x < 0)
-            {
-                spriteRenderer.flipX = true;
-            }
+            facingRight = !facingRight;
+            Vector3 theScale = transform.localScale;
+            theScale.x *= -1;
+            transform.localScale = theScale;
+        }
+
+        if (direction.x == 0 && direction.y == 0)
+        {
+            animator.SetBool("isMoving", false);
+        }
+        else
+        {
+            animator.SetBool("isMoving", true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetBool("isFighting", true);
+        } else
+        {
+            animator.SetBool("isFighting", false);
         }
     }
 
