@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
 {
+  
     public bool isFull;
     public GameObject inHand;
 
@@ -14,6 +15,7 @@ public class PlayerHand : MonoBehaviour
     {
         if (isFull)
         {
+
             isFull = false;
             GameObject.Destroy(inHand);
         }

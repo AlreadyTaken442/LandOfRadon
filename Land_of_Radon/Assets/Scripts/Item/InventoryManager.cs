@@ -8,8 +8,7 @@ public class InventoryManager : MonoBehaviour
     public int maxStackedItems = 4;
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
-
-   public int selectedSlot = -1;
+    public int selectedSlot = -1;
     private PlayerHand playerHand;
 
     private void Start()
@@ -33,7 +32,7 @@ public class InventoryManager : MonoBehaviour
     void ChangeSelectedSlot(int newValue) { 
     
         if (selectedSlot >= 0) {
-            playerHand.EmptyHand();
+        playerHand.EmptyHand();
         inventorySlots[selectedSlot].Deselect(); 
     }
         inventorySlots[newValue].Select();

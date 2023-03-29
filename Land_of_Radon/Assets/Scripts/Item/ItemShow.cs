@@ -6,9 +6,11 @@ public class ItemShow : MonoBehaviour
 {
     [SerializeField] private GameObject item;
 
+
+
+    // Private
     private PlayerHand playerHand;
     private GameObject hand;
-
     private InventorySlot slot;
     private InventoryManager inventory;
     private int i;
@@ -16,13 +18,12 @@ public class ItemShow : MonoBehaviour
     private void Start()
     {
         hand = GameObject.FindGameObjectWithTag("Hand");
-      playerHand = hand.GetComponent<PlayerHand>();
-
+        playerHand = hand.GetComponent<PlayerHand>();
         inventory = GameObject.FindGameObjectWithTag("inventory").GetComponent<InventoryManager>();
 
-      slot = GetComponentInParent<InventorySlot>();
-      i = slot.i;
+        
     }
+
     private void Update()
     {
         PutInHand();
@@ -30,7 +31,9 @@ public class ItemShow : MonoBehaviour
 
     public void PutInHand()
     {
-       if (inventory.selectedSlot == i  &&  playerHand.isFull == false)
+        slot = GetComponentInParent<InventorySlot>();
+        i = slot.i;
+        if (inventory.selectedSlot == i  &&  playerHand.isFull == false)
       {
             playerHand.isFull = true;
             playerHand.inHand = Instantiate(item, hand.transform, false);
