@@ -8,6 +8,14 @@ TagManager:
   - Enemy
   - Hand
   - inventory
+  - Lila Portal
+  - Blaues Portal
+  - Gelbes Portal
+  - Rotes Portal
+  - "Gr\xFCnes Portal Lila"
+  - "Gr\xFCnes Portal Blau"
+  - "Gr\xFCnes Portal Gelb"
+  - "Gr\xFCnes Portal Rot"
   layers:
   - Default
   - TransparentFX

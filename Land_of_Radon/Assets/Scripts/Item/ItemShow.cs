@@ -21,10 +21,7 @@ public class ItemShow : MonoBehaviour
         playerHand = hand.GetComponent<PlayerHand>();
         inventory = GameObject.FindGameObjectWithTag("inventory").GetComponent<InventoryManager>();
 
-<<<<<<< Updated upstream
-        
-=======
->>>>>>> Stashed changes
+
     }
 
     private void Update()
