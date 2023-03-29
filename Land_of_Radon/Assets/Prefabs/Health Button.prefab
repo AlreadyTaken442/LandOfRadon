@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3112309896179592350}
   - component: {fileID: -6432769353993590051}
   - component: {fileID: 7405064152339377995}
+  - component: {fileID: 4124639229599050788}
   m_Layer: 5
   m_Name: Health Button
   m_TagString: Untagged
@@ -135,11 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20987d08094fcc84d820b834840f9186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countText: {fileID: 0}
   image: {fileID: 2196013247973978477}
   parentAfterDrag: {fileID: 0}
-  item: {fileID: 0}
-  count: 1
 --- !u!225 &7405064152339377995
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -152,3 +150,16 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &4124639229599050788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724280155797058033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf470383de3cac649a0bf882038e52f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 5867492718154320212, guid: 8c7a039ca77964b479a2df3f6adbbe8a, type: 3}

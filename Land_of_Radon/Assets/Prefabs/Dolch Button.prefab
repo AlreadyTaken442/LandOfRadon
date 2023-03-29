@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7515989176752812370}
   - component: {fileID: -1532569901538724021}
   - component: {fileID: -8070515700429879932}
+  - component: {fileID: -4026407140280881111}
   m_Layer: 5
   m_Name: Dolch Button
   m_TagString: Untagged
@@ -149,3 +150,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   image: {fileID: 7515989176752812370}
   parentAfterDrag: {fileID: 0}
+--- !u!114 &-4026407140280881111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8682266554320946411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf470383de3cac649a0bf882038e52f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 5867492718154320212, guid: 2f02e7a2cca630a4f9ea775f1435ea8e, type: 3}

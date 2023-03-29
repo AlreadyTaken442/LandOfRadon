@@ -9,11 +9,13 @@ public class InventoryManager : MonoBehaviour
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
 
-    int selectedSlot = -1;
+   public int selectedSlot = -1;
+    private PlayerHand playerHand;
 
     private void Start()
     {
         ChangeSelectedSlot(0);
+        playerHand = GameObject.FindGameObjectWithTag("Hand").GetComponent<PlayerHand>();
     }
 
     private void Update()
@@ -30,7 +32,8 @@ public class InventoryManager : MonoBehaviour
     }
     void ChangeSelectedSlot(int newValue) { 
     
-        if (selectedSlot >= 0) { 
+        if (selectedSlot >= 0) {
+            playerHand.EmptyHand();
         inventorySlots[selectedSlot].Deselect(); 
     }
         inventorySlots[newValue].Select();
@@ -48,7 +51,6 @@ public class InventoryManager : MonoBehaviour
             DragDrop itemInSlot = slot.GetComponentInChildren<DragDrop>();
             if (itemInSlot == null || itemInSlot.gameObject == null)
             {
-               
                 return;
             }
         }
