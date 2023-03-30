@@ -39,23 +39,11 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
     {
         movementInput = movement.action.ReadValue<Vector2>(); // Eingabewerte für die Bewegung lesen
 
-
-        if (currentHealth == 0)
-        {
-            SceneManager.LoadScene("GameOver");
-        }
-
-        //if (input.getkeydown(keycode.tab)) // test um leben zu verlieren
+        //if (currentHealth == 0)
         //{
-        //    currenthealth -= 1;
-        //    healthbar.sethealth(currenthealth);
+        //    Destroy(gameObject);
+        //    SceneManager.LoadScene("GameOver");
         //}
-
-        if (currentHealth == 0)
-        {
-            Destroy(gameObject);
-            SceneManager.LoadScene("GameOver");
-        }
 
         // Bewege den Charakter in die ausgewählte Richtung
         float horizontal = Input.GetAxis("Horizontal");
