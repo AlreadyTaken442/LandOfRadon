@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
 
         if (currentHealthEnemy <= 0) // Wenn die aktuelle Gesundheit kleiner oder gleich 0 ist
         {
+            
             Die(); // Ruft die Funktion Die() auf
         }
     }
@@ -28,6 +29,8 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Debug.Log("Enemy died!"); // Gibt eine Debug-Meldung aus, dass der Feind gestorben ist
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
         Destroy(gameObject);
+        
     }
 }
