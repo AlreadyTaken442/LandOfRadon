@@ -5,45 +5,36 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
+public class Charakter : MonoBehaviour
 {
-    public float speed; // Geschwindigkeit des Charakters
-    [SerializeField] private InputActionReference movement; // Referenz auf eine InputAction, die die Bewegung des Charakters steuert
-    private Rigidbody2D rigbod; // Rigidbody2D-Komponente des Charakters
-    private Vector2 movementInput; // Eingabewerte für die Bewegung des Charakters
+    public float speed; // Die Geschwindigkeit des Charakters
+    [SerializeField] private InputActionReference movement; // Eine Referenz auf eine InputAction, die die Bewegung des Charakters steuert
+    private Rigidbody2D rigbod; // Die Rigidbody2D-Komponente des Charakters
+    private Vector2 movementInput; // Die Eingabewerte für die Bewegung des Charakters
+    public int maxHealth; // Die maximale Anzahl an Lebenspunkten des Charakters
+    public int currentHealth; // Die aktuelle Anzahl an Lebenspunkten des Charakters
+    private bool facingRight = true; // Eine Variable, die speichert, ob der Charakter nach rechts schaut
+    public HealthBar healthBar; // Eine Referenz auf die HealthBar-Komponente
+    public Animator animator; // Eine Referenz auf die Animator-Komponente
+    public Transform target; // Das Ziel-Transform des Charakters (nicht verwendet)
 
-    public int maxHealth;
-    public int currentHealth;
-    private bool facingRight = true;
-    public HealthBar healthBar;
-
-    public Animator animator;
-
-    public Transform target; // Ziel-Transform des Charakters (nicht verwendet)
-
-    // Speichere die letzte Laufrichtung des Charakters
+    // Eine Variable, die die letzte Laufrichtung des Charakters speichert
     private Vector2 lastDirection = Vector2.right;
 
-    // Verweise auf das Sprite-Renderer-Komponente des Charakters
+    // Eine Referenz auf die SpriteRenderer-Komponente des Charakters
     private SpriteRenderer spriteRenderer;
 
     private void Start()
     {
-        rigbod = GetComponent<Rigidbody2D>(); // Initialisierung des Rigidbody2D-Komponente
+        rigbod = GetComponent<Rigidbody2D>(); // Initialisierung der Rigidbody2D-Komponente
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>(); // Initialisierung der SpriteRenderer-Komponente
     }
 
     void Update()
     {
         movementInput = movement.action.ReadValue<Vector2>(); // Eingabewerte für die Bewegung lesen
-
-        //if (currentHealth == 0)
-        //{
-        //    Destroy(gameObject);
-        //    SceneManager.LoadScene("GameOver");
-        //}
 
         // Bewege den Charakter in die ausgewählte Richtung
         float horizontal = Input.GetAxis("Horizontal");
@@ -60,6 +51,7 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
             transform.localScale = theScale;
         }
 
+        // Setze den Animator-Trigger isMoving, um zu signalisieren, dass der Charakter sich bewegt
         if (direction.x == 0 && direction.y == 0)
         {
             animator.SetBool("isMoving", false);
@@ -69,6 +61,7 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
             animator.SetBool("isMoving", true);
         }
 
+        // Setze den Animator-Trigger isFighting, wenn die Leertaste gedrückt wird
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("true");
@@ -86,20 +79,15 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
         rigbod.velocity = movementInput * speed; // Bewegung des Charakters berechnen und an den Rigidbody übertragen
     }
 
+    // Funktion zum Abziehen von Schaden vom Charakter
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
 
-    public void takeDamage(int damage)
-    {
-        currentHealth -= damage;
-        if (currentHealth <= 0)
-        {
-            Die();
-        }
-    }
+    // Funktion,
+
 
     void Die()
     {
