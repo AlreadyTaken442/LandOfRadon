@@ -45,15 +45,16 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
             SceneManager.LoadScene("GameOver");
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab)) // Test um leben zu verlieren
-        {
-            currentHealth -= 1;
-            healthBar.SetHealth(currentHealth);
-        }
+        //if (input.getkeydown(keycode.tab)) // test um leben zu verlieren
+        //{
+        //    currenthealth -= 1;
+        //    healthbar.sethealth(currenthealth);
+        //}
 
         if (currentHealth == 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("GameOver");
         }
 
         // Bewege den Charakter in die ausgewählte Richtung
@@ -82,10 +83,13 @@ public class Charakter : MonoBehaviour // Definition der Charakter-Klasse
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            animator.SetBool("isFighting", true);
-        } else
+            Debug.Log("true");
+            animator.SetTrigger("isFighting");
+        }
+        else
         {
-            animator.SetBool("isFighting", false);
+            Debug.Log("Reset");
+            animator.SetTrigger("isntFighting");
         }
     }
 

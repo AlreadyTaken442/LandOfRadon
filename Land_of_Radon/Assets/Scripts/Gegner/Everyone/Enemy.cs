@@ -4,32 +4,30 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int maxHealthEnemy = 100;
-    public  int currentHealthEnemy;
+    public int maxHealthEnemy = 100; // Setzt die maximale Gesundheit des Feindes
+    public int currentHealthEnemy; // Setzt die aktuelle Gesundheit des Feindes
 
-    // Start is called before the first frame update
+    // Wird aufgerufen, bevor das erste Frame aktualisiert wird
     void Start()
     {
-        currentHealthEnemy = maxHealthEnemy;
+        currentHealthEnemy = maxHealthEnemy; // Setzt die aktuelle Gesundheit des Feindes auf das Maximum
     }
 
+    // Diese Funktion wird aufgerufen, wenn der Feind Schaden nimmt
     public void TakeDamage(int damage)
     {
-        currentHealthEnemy -= damage;
+        currentHealthEnemy -= damage; // Verringert die aktuelle Gesundheit des Feindes um den Schaden
 
-        if (currentHealthEnemy <= 0)
+        if (currentHealthEnemy <= 0) // Wenn die aktuelle Gesundheit kleiner oder gleich 0 ist
         {
-            Die();
-        }
-        if (currentHealthEnemy <= 0)
-        {
-            currentHealthEnemy = 0;
-            Destroy(gameObject);
+            Die(); // Ruft die Funktion Die() auf
         }
     }
 
+    // Diese Funktion wird aufgerufen, wenn der Feind stirbt
     void Die()
     {
-        Debug.Log("Enemy died!");
+        Debug.Log("Enemy died!"); // Gibt eine Debug-Meldung aus, dass der Feind gestorben ist
+        Destroy(gameObject);
     }
 }
