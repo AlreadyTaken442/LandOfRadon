@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
+// using static UnityEditor.Progress;
 
 public class InventoryManager : MonoBehaviour
 {
-    public int maxStackedItems = 4; // Die maximale Anzahl von gestapelten Items in einem Slot
+    // public int maxStackedItems = 4; // Die maximale Anzahl von gestapelten Items in einem Slot
     public InventorySlot[] inventorySlots; // Eine Liste von InventorySlot-Objekten
-    public GameObject inventoryItemPrefab; // Das Prefab für InventoryItem
+    // public GameObject inventoryItemPrefab; // Das Prefab für InventoryItem
     public int selectedSlot = -1; // Der aktuell ausgewählte Slot, -1 bedeutet, dass kein Slot ausgewählt ist
     private PlayerHand playerHand; // Eine Referenz auf das PlayerHand-Skript
 
@@ -44,7 +44,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Fügt ein Item zu einem leeren Slot hinzu
-    void AddToEmptySlot(Item item)
+    void AddToEmptySlot(/*Item item */)
     {
         // Suche nach einem leeren Slot
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -59,9 +59,9 @@ public class InventoryManager : MonoBehaviour
     }
 
     // Fügt ein Item zum Inventar hinzu
-    public void AddItem(Item item)
+    public void AddItem(/*Item item*/)
     {
-        AddToEmptySlot(item); // Füge das Item zu einem leeren Slot hinzu
+        AddToEmptySlot(/*item */); // Füge das Item zu einem leeren Slot hinzu
     }
 
 }
