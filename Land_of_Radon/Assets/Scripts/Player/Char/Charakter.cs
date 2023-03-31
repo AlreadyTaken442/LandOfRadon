@@ -84,6 +84,10 @@ public class Charakter : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+
+        if(currentHealth <= 0) {
+            Die();
+        }
     }
 
     // Funktion
@@ -91,6 +95,7 @@ public class Charakter : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject);
+        LevelManager.instance.GameOver();
+        gameObject.SetActive(false);
     }
 }

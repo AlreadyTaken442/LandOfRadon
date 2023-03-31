@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    //public GameOverScreen GameOverScreen;
+  /*  public GameOverScreen GameOverScreen;
 
-    //public void GameOver()
-    //{
-    //    GameOverScreen.Setup(maxPlatform);
-    //}
+    public void GameOver()
+    {
+        GameOverScreen.Setup(maxPlatform);
+    }
+  */
 }
