@@ -69,7 +69,7 @@ public class Charakter : MonoBehaviour
         }
         else
         {
-            Debug.Log("Reset");
+            
             animator.SetTrigger("isntFighting");
         }
     }
@@ -86,7 +86,7 @@ public class Charakter : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    // Funktion,
+    // Funktion
 
 
     void Die()
